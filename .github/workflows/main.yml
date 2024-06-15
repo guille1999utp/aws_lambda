@@ -27,5 +27,5 @@ jobs:
           npm ci 
       - name: deploy
         run: |
-          zip -j deploy.zip ./* #--> Zip the Code As we know lambda function accept the zip file.
+          zip -j deploy.zip ./*
           aws lambda update-function-code --function-name=youtube --zip-file=fileb://deploy.zip 
